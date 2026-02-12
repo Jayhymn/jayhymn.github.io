@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Adetunji Adegbite | Senior Mobile Engineer</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .code-accent { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(0.5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .float-element { animation: float 6s ease-in-out infinite; }
+        .custom-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(43, 140, 238, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .nav-scrolled {
+            background-color: rgba(16, 25, 34, 0.85);
+            backdrop-filter: blur(12px);
+            height: 70px !important;
+            border-bottom: 1px solid rgba(43, 140, 238, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 h-20 flex items-center border-b border-primary/10">
+    <div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <span class="text-primary font-bold text-xl tracking-tighter">&lt;AA /&gt;</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <a class="hover:text-primary transition-colors" href="#skills">Skills</a>
+            <a class="hover:text-primary transition-colors" href="#experience">Experience</a>
+            <a class="hover:text-primary transition-colors" href="#work">Projects</a>
+            <a class="px-5 py-2 rounded bg-primary text-white hover:shadow-[0_0_20px_rgba(43,140,238,0.4)] transition-all" href="#">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<main class="custom-grid">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7" data-aos="fade-right">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    <span class="code-accent uppercase tracking-widest">Open to Architectural Consulting</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-4">
+                    ADETUNJI <br/> <span class="text-primary">ADEGBITE</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-medium text-slate-500 dark:text-slate-400 mb-8 h-12">
+                    <span id="typed-text"></span>
+                </h2>
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-10">
+                    Specializing in <span class="text-primary font-semibold">Contactless Payments</span> and <span class="text-primary font-semibold">Logistics Scale</span>. Expert in Kotlin and Flutter, currently expanding into Spring Boot ecosystem.
+                </p>
+                <div class="flex items-center space-x-6">
+                    <a class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded font-bold hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1" href="mailto:hello@adetunji.dev">Get in touch</a>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Jayhymn" target="_blank" class="hover:text-primary transition-colors"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-6 h-6 dark:invert" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/adetunji-adegbite/" target="_blank" class="hover:text-primary transition-colors"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-6 h-6" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tailored Kotlin/Spring Terminal -->
+            <div class="lg:col-span-5 relative hidden lg:block float-element" data-aos="zoom-in">
+                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-20"></div>
+                <div class="relative bg-slate-800/90 backdrop-blur-xl border border-white/10 rounded-xl p-6 shadow-2xl">
+                    <div class="flex items-center space-x-2 mb-4 border-b border-white/10 pb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        <span class="text-[10px] text-slate-500 code-accent ml-2 uppercase">Core_Competency.kt</span>
+                    </div>
+                    <pre class="text-xs md:text-sm text-slate-300 space-y-2 code-accent">
+<span class="text-purple-400">val</span> mobileStack = <span class="text-green-400">listOf</span>(<span class="text-orange-300">"Kotlin"</span>, <span class="text-orange-300">"Flutter"</span>, <span class="text-orange-300">"Swift"</span>)
+<span class="text-purple-400">val</span> learning = <span class="text-green-400">"Spring Boot"</span>
+
+<span class="text-purple-400">fun</span> <span class="text-blue-400">optimize</span>() {
+    <span class="text-slate-500">// Interswitch Achievement</span>
+    encryptOfflineData(<span class="text-yellow-200">AES</span>)
+    broadcastISO8583()
+    
+    <span class="text-slate-500">// Kwik Achievement</span>
+    reduceApiCosts(<span class="text-yellow-200">GooglePlaces</span>)
+}
+</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50" id="skills">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Technical Arsenal</h2>
+                <h3 class="text-4xl font-bold dark:text-white">Expertise & Skills</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mobile Card -->
+                <div class="p-8 rounded-xl bg-background-light dark:bg-background-dark border border-primary/10 hover:border-primary/50 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <span class="material-icons text-primary mb-4 text-4xl">devices</span>
+                    <h4 class="text-xl font-bold mb-4">Mobile & Cross-Platform</h4>
+                    <ul class="text-slate-500 space-y-2 text-sm">
+                        <li>• Kotlin & Android SDK (100k+ Users)</li>
+                        <li>• Flutter/Dart Expert</li>
+                        <li>• Swift & iOS Codebase Maintenance</li>
+                        <li>• Jetpack Compose</li>
+                    </ul>
+                </div>
+                <!-- Fintech Card -->
+                <div class="p-8 rounded-xl bg-background-light dark:bg-background-dark border border-primary/10 hover:border-primary/50 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-icons text-primary mb-4 text-4xl">enhanced_encryption</span>
+                    <h4 class="text-xl font-bold mb-4">Security & Fintech</h4>
+                    <ul class="text-slate-500 space-y-2 text-sm">
+                        <li>• NFC Contactless Payments</li>
+                        <li>• ISO 8583 Protocol</li>
+                        <li>• AES Data Encryption</li>
+                        <li>• Offline-First Architecture</li>
+                    </ul>
+                </div>
+                <!-- Optimization Card -->
+                <div class="p-8 rounded-xl bg-background-light dark:bg-background-dark border border-primary/10 hover:border-primary/50 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-icons text-primary mb-4 text-4xl">analytics</span>
+                    <h4 class="text-xl font-bold mb-4">Optimization / Backend</h4>
+                    <ul class="text-slate-500 space-y-2 text-sm">
+                        <li>• API Cost Optimization (Google Places)</li>
+                        <li>• Spring Boot (Core Concepts)</li>
+                        <li>• Google Map Embedded APIs</li>
+                        <li>• Real-time Proximity Algorithms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Experience Timeline -->
+<section class="py-24 px-6" id="experience">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">The Journey</h2>
+            <h3 class="text-4xl font-bold dark:text-white">Professional Experience</h3>
+        </div>
+        
+        <div class="relative border-l-2 border-primary/20 ml-4 md:ml-0 md:left-1/2">
+            
+            <!-- Interswitch -->
+            <div class="mb-16 relative" data-aos="fade-right">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_15px_rgba(43,140,238,0.6)]"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right relative -top-1 ml-8 md:ml-0 md:left-[-50%]">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">2025 — PRESENT</span>
+                    <h4 class="text-2xl font-bold mt-1 dark:text-white">Interswitch Group</h4>
+                    <p class="text-slate-500 font-medium mb-4">Senior Mobile Engineer</p>
+                    <div class="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-primary/5 inline-block text-left">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-3">
+                            Architecting <span class="text-primary font-medium">offline-first contactless payment</span> systems. Engineered NFC-based solutions using ISO8583 protocols and secured sensitive offline card interactions via AES encryption standards.
+                        </p>
+                        <div class="bg-primary/10 border-l-2 border-primary p-2">
+                            <span class="text-primary font-bold text-sm uppercase font-semibold">Security Focus:</span>
+                            <span class="text-xs text-slate-500 ml-1">High-stakes payment SDK encryption</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kwik Delivery -->
+            <div class="mb-16 relative" data-aos="fade-left">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(43,140,238,0.5)]"></div>
+                <div class="md:w-1/2 md:pl-12 relative -top-1 ml-8 md:ml-0">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">2023 — 2025</span>
+                    <h4 class="text-2xl font-bold mt-1 dark:text-white">Kwik Delivery</h4>
+                    <p class="text-slate-500 font-medium mb-4">Lead Mobile Developer</p>
+                    <div class="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-primary/5">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-3">
+                            Managed the Android application serving <span class="text-white">100,000+ users</span> and assumed ownership of the Swift iOS codebase. Drastically reduced operational overhead by optimizing Google Places API usage through intelligent debouncers and location caching.
+                        </p>
+                        <div class="bg-primary/10 border-l-2 border-primary p-2">
+                            <span class="text-primary font-bold text-lg">70%</span>
+                            <span class="text-xs text-slate-500 ml-1 uppercase font-semibold">API Cost Reduction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Papyrus -->
+            <div class="mb-16 relative" data-aos="fade-right">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(43,140,238,0.5)]"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right relative -top-1 ml-8 md:ml-0 md:left-[-50%]">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">2022 — 2023</span>
+                    <h4 class="text-2xl font-bold mt-1 dark:text-white">Papyrus Digital Solutions</h4>
+                    <p class="text-slate-500 font-medium mb-4">Mobile Software Engineer</p>
+                    <div class="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-primary/5 inline-block text-left">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-3">
+                            Developed <span class="italic">FieldMaxPro</span>, a flagship sales force automation tool. Focused on complex <span class="text-primary">offline-first data synchronization</span> to ensure field agents remained productive in low-connectivity areas.
+                        </p>
+                        <div class="bg-primary/10 border-l-2 border-primary p-2 text-right">
+                            <span class="text-primary font-bold text-lg">60%</span>
+                            <span class="text-xs text-slate-500 ml-1 uppercase font-semibold">App Performance Boost</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Triple Controx -->
+            <div class="mb-16 relative" data-aos="fade-left">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(43,140,238,0.5)]"></div>
+                <div class="md:w-1/2 md:pl-12 relative -top-1 ml-8 md:ml-0">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">2017 — 2021</span>
+                    <h4 class="text-2xl font-bold mt-1 dark:text-white">Triple Controx Systems</h4>
+                    <p class="text-slate-500 font-medium mb-4">Mobile & Web Developer</p>
+                    <div class="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-primary/5">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-3">
+                            Engineered an event management ecosystem. Integrated <span class="text-white font-medium">AWS Rekognition SDK</span> for biometric verification and utilized Google Play Services Location API for geofencing-based user engagement.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 rounded bg-slate-700 text-[10px] text-slate-300 uppercase">AWS Rekognition</span>
+                            <span class="px-2 py-1 rounded bg-slate-700 text-[10px] text-slate-300 uppercase">Geofencing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Featured Project: Profixa -->
+<section class="py-24 px-6 bg-slate-900/20" id="work">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header with Dual Store Badges -->
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12" data-aos="fade-up">
+            <div>
+                <h3 class="text-4xl font-bold dark:text-white">Featured Project</h3>
+                <p class="text-slate-500 mt-2">Connecting artisans and customers through geospatial intelligence.</p>
+            </div>
+            <div class="flex items-center space-x-4 mt-6 md:mt-0">
+                <a href="https://play.google.com/store/apps/details?id=com.jayhymn.profix" target="_blank" class="hover:scale-105 transition-transform">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-10">
+                </a>
+                <a href="https://apps.apple.com/us/app/profixa/id6743962532" target="_blank" class="hover:scale-105 transition-transform">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-10">
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Visual Showcase (Phone Frame) -->
+        <div class="lg:col-span-5" data-aos="zoom-in">
+            <div class="relative mx-auto border-slate-800 dark:border-slate-700 bg-slate-900 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl overflow-hidden shadow-primary/20">
+                
+                <!-- Speaker / Camera Notch -->
+                <div class="w-[148px] h-[18px] bg-slate-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-10"></div>
+                
+                <!-- THE VIDEO ELEMENT -->
+                <video 
+                    class="h-full w-full object-cover" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    poster="profixa-thumbnail.jpg">
+                    <source src="profixa-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Overlay Gradient for a premium look -->
+                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+            </div>
+        </div>
+
+            <!-- Content -->
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <div class="inline-block px-3 py-1 rounded bg-primary/10 text-primary text-xs font-bold mb-4 uppercase tracking-widest">Live on iOS & Android</div>
+                <h4 class="text-4xl font-bold mb-6 dark:text-white">Profixa</h4>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    A service provider ecosystem built with <span class="text-white">Flutter</span>. Profixa solves the "discovery gap" by connecting artisans with customers based on real-time proximity and map-based navigation.
+                </p>
+                
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-primary/20 p-2 rounded mr-4">
+                            <span class="material-icons text-primary text-sm">map</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Geospatial Routing</h5>
+                            <p class="text-sm text-slate-500">Implemented real-time directions using Google Maps SDK to guide customers directly to workshops.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-primary/20 p-2 rounded mr-4">
+                            <span class="material-icons text-primary text-sm">location_on</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Proximity Search</h5>
+                            <p class="text-sm text-slate-500">Custom algorithms to prioritize service providers within a 5-10km radius of the user.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Actions -->
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.jayhymn.profix" target="_blank" class="flex items-center space-x-2 bg-slate-900 border border-slate-700 text-white px-5 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" class="w-5 h-5" alt="">
+                        <span>Google Play</span>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/profixa/id6743962532" target="_blank" class="flex items-center space-x-2 bg-white text-black px-5 py-3 rounded-lg font-bold hover:bg-slate-200 transition-all">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" class="w-5 h-5" alt="">
+                        <span>App Store</span>
+                    </a>
+                    <a href="mailto:hello@adetunji.dev" class="flex items-center space-x-2 border border-primary text-primary px-5 py-3 rounded-lg font-bold hover:bg-primary/10 transition-all">
+                        <span class="material-icons text-sm">article</span>
+                        <span>Case Study</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Other Noteworthy Projects Grid -->
+<section class="py-24 px-6 border-t border-primary/5">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-12" data-aos="fade-up">
+            <h4 class="text-2xl font-bold dark:text-white">Engineering Lab & Side Projects</h4>
+            <div class="h-1 w-12 bg-primary mt-2"></div>
+            <p class="text-slate-500 mt-4 text-sm">A collection of native experiments and productivity tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project: Solfa (Kotlin Music Player) -->
+            <div class="group bg-background-light dark:bg-slate-800/40 border border-white/5 rounded-xl p-8 hover:border-primary/30 transition-all duration-300 shadow-xl" data-aos="fade-up">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                        <span class="material-icons">library_music</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.jayhymn.solfa" target="_blank" class="text-slate-500 hover:text-primary transition-colors">
+                        <span class="material-icons text-sm">open_in_new</span>
+                    </a>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-3 dark:text-white group-hover:text-primary transition-colors">Solfa Player</h5>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Native, high-performance offline music player. Leverages <span class="text-white">Native Kotlin</span> and ExoPlayer for low-latency audio processing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-slate-900 text-slate-400 border border-white/5">Kotlin</span>
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-slate-900 text-slate-400 border border-white/5">ExoPlayer</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.jayhymn.solfa" target="_blank" class="text-xs font-bold text-primary uppercase tracking-widest flex items-center">
+                        Play Store <span class="material-icons text-xs ml-1">chevron_right</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project: Epsilon (Productivity Tool) -->
+            <div class="group bg-background-light dark:bg-slate-800/40 border border-white/5 rounded-xl p-8 hover:border-primary/30 transition-all duration-300 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                        <span class="material-icons">timer</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1lFkVUphwdoa5A7gCeuoNjCfHL_ZAUAn9/view?usp=share_link" target="_blank" class="text-slate-500 hover:text-primary transition-colors">
+                        <span class="material-icons text-sm">visibility</span>
+                    </a>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-3 dark:text-white group-hover:text-primary transition-colors">Epsilon</h5>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Workplace productivity tracker featuring <span class="text-white">Split-Break Logic</span> to accurately track active working hours vs. intervals.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-slate-900 text-slate-400 border border-white/5">State Management</span>
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-slate-900 text-slate-400 border border-white/5">Custom UI</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1lFkVUphwdoa5A7gCeuoNjCfHL_ZAUAn9/view?usp=share_link" target="_blank" class="text-xs font-bold text-primary uppercase tracking-widest flex items-center">
+                        View Demo <span class="material-icons text-xs ml-1">chevron_right</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- THE NEW GITHUB CTA CARD -->
+            <div class="group relative bg-primary/5 border border-dashed border-primary/30 rounded-xl p-8 flex flex-col justify-center items-center text-center hover:bg-primary/10 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <!-- Decorative background GitHub logo -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-40 h-40" alt="">
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-8 h-8 dark:invert" alt="GitHub">
+                    </div>
+                    <h5 class="text-xl font-bold mb-2 dark:text-white">Full Project Library</h5>
+                    <p class="text-slate-500 text-xs px-4 mb-6">
+                        Interested in my code patterns? I have 40+ repositories covering everything from 
+                        <span class="text-primary">Native Kotlin experiments</span> to 
+                        <span class="text-primary">Spring Boot architectures</span>.
+                    </p>
+                    <a href="https://github.com/Jayhymn?tab=repositories" target="_blank" class="bg-primary text-white text-xs font-bold px-6 py-3 rounded-lg hover:shadow-[0_0_20px_rgba(43,140,238,0.4)] transition-all inline-block">
+                        Browse Repositories
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="py-12 px-6 border-t border-primary/10 text-center">
+    <p class="text-slate-500 text-sm code-accent">© 2024 ADETUNJI ADEGBITE. Built with Kotlin, Flutter & Passion.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    new Typed('#typed-text', {
+        strings: [
+            'NFC & Contactless Payment Expert',
+            'Cross-Platform Mobile Architect',
+            'Performance Optimization Lead',
+            'Aspiring Spring Boot Developer'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        backDelay: 2000
+    });
+
+    const navbar = document.getElementById('navbar');
+    window.onscroll = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
+    };
+</script>
+
+</body>
+</html>
